@@ -23,6 +23,7 @@ public class AccountsPage {
 	}
 
 	private By logoutLink = By.linkText("Logout");
+	private By loginLink = By.linkText("Login");
 	private By headers = By.cssSelector("div#content h2");
 	private By search = By.name("search");
 	private By searchIcon = By.cssSelector("div#search button");
@@ -41,6 +42,11 @@ public class AccountsPage {
 
 	public boolean isLogoutLinkExist() {
 		return eleUtil.doIsDisplayed(logoutLink);
+	}
+
+	public void logout(){
+		eleUtil.doClick(logoutLink);
+		eleUtil.doClick(loginLink);
 	}
 
 	public List<String> getAccPageHeaders() {

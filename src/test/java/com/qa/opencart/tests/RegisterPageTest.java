@@ -28,7 +28,7 @@ public class RegisterPageTest extends BaseTest {
 	@Description("Setup method to navigate to the registration page.")
 	public void regSetup() {
 		regPage = loginPage.navigateToRegisterPage();
-        ExcelUtil.attachTestData();
+//        ExcelUtil.attachTestData();
 
 	}
 
