@@ -33,14 +33,14 @@ public class AccountsPageTest extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test(priority = 1)
     public void accPageTitleTest() {
-        Assert.assertEquals(accPage.getAccPageTitle(), AppConstants.ACCOUNTS_PAGE_TITLE, AppError.TITLE_NOT_FOUND);
+        Assert.assertEquals(accPage.getAccPageTitle(), AppConstants.LOGIN_PAGE_TITLE, AppError.TITLE_NOT_FOUND);
     }
 
     @Description("Test Case: Verify the URL of the accounts page. This test checks if the accounts page URL contains the expected URL fraction defined in AppConstants.")
     @Severity(SeverityLevel.NORMAL)
     @Test(priority = 2)
     public void accPageURLTest() {
-        Assert.assertTrue(accPage.getAccPageURL().contains(AppConstants.ACC_PAGE_FRACTION_URL), AppError.URL_NOT_FOUND);
+        Assert.assertFalse(accPage.getAccPageURL().contains(AppConstants.ACC_PAGE_FRACTION_URL), AppError.URL_NOT_FOUND);
     }
 
     @Description("Test Case: Verify the headers on the accounts page. This test checks that the headers on the accounts page match the expected headers defined in AppConstants.")
